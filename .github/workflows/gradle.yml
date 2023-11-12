@@ -41,7 +41,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew build publish koverXmlReport
+      run: ./gradlew build koverXmlReport
 
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
@@ -52,7 +52,7 @@ jobs:
       with:
         args: >
           -Dsonar.organization=airflux
-          -Dsonar.projectKey=airflux_airflux
+          -Dsonar.projectKey=airflux_airflux-functional
           -Dsonar.coverage.exclusions="**/test/**"
     - name: Codacy Coverage Reporter
       uses: codacy/codacy-coverage-reporter-action@v1.3.0
