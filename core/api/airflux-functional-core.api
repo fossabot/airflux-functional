@@ -1,3 +1,7 @@
+public final class io/github/airflux/functional/NonFatalKt {
+	public static final fun isFatal (Ljava/lang/Throwable;)Z
+}
+
 public abstract class io/github/airflux/functional/Result {
 	public static final field Companion Lio/github/airflux/functional/Result$Companion;
 }
@@ -58,5 +62,53 @@ public final class io/github/airflux/functional/ResultKt {
 	public static final fun sequence (Ljava/lang/Iterable;)Lio/github/airflux/functional/Result;
 	public static final fun success (Ljava/lang/Object;)Lio/github/airflux/functional/Result$Success;
 	public static final fun traverse (Ljava/lang/Iterable;Lkotlin/jvm/functions/Function1;)Lio/github/airflux/functional/Result;
+}
+
+public abstract class io/github/airflux/functional/Try {
+	public static final field Companion Lio/github/airflux/functional/Try$Companion;
+}
+
+public final class io/github/airflux/functional/Try$Companion {
+	public final fun getAsEmptyList ()Lio/github/airflux/functional/Try;
+	public final fun getAsFalse ()Lio/github/airflux/functional/Try;
+	public final fun getAsNull ()Lio/github/airflux/functional/Try;
+	public final fun getAsTrue ()Lio/github/airflux/functional/Try;
+	public final fun getAsUnit ()Lio/github/airflux/functional/Try;
+	public final fun invoke (Lkotlin/jvm/functions/Function0;)Lio/github/airflux/functional/Try;
+	public final fun of (Z)Lio/github/airflux/functional/Try;
+	public final fun tryRun (Lkotlin/jvm/functions/Function0;)Lio/github/airflux/functional/Try;
+}
+
+public final class io/github/airflux/functional/Try$Failure : io/github/airflux/functional/Try {
+	public fun <init> (Ljava/lang/Throwable;)V
+	public final fun getException ()Ljava/lang/Throwable;
+}
+
+public final class io/github/airflux/functional/Try$Success : io/github/airflux/functional/Try {
+	public fun <init> (Ljava/lang/Object;)V
+	public final fun getResult ()Ljava/lang/Object;
+}
+
+public final class io/github/airflux/functional/TryKt {
+	public static final fun bind (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;)Lio/github/airflux/functional/Try;
+	public static final fun fold (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+	public static final fun getOrElse (Lio/github/airflux/functional/Try;Ljava/lang/Object;)Ljava/lang/Object;
+	public static final fun getOrElse (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+	public static final fun getOrForward (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+	public static final fun getOrNull (Lio/github/airflux/functional/Try;)Ljava/lang/Object;
+	public static final fun isError (Lio/github/airflux/functional/Try;)Z
+	public static final fun isError (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;)Z
+	public static final fun isSuccess (Lio/github/airflux/functional/Try;)Z
+	public static final fun isSuccess (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;)Z
+	public static final fun map (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;)Lio/github/airflux/functional/Try;
+	public static final fun onFailure (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;)Lio/github/airflux/functional/Try;
+	public static final fun onSuccess (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;)Lio/github/airflux/functional/Try;
+	public static final fun orElse (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function0;)Lio/github/airflux/functional/Try;
+	public static final fun orThrow (Lio/github/airflux/functional/Try;)Ljava/lang/Object;
+	public static final fun orThrow (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+	public static final fun recover (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;)Lio/github/airflux/functional/Try;
+	public static final fun recoverWith (Lio/github/airflux/functional/Try;Lkotlin/jvm/functions/Function1;)Lio/github/airflux/functional/Try;
+	public static final fun sequence (Ljava/lang/Iterable;)Lio/github/airflux/functional/Try;
+	public static final fun traverse (Ljava/lang/Iterable;Lkotlin/jvm/functions/Function1;)Lio/github/airflux/functional/Try;
 }
 
