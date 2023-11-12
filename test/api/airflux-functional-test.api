@@ -1,0 +1,5 @@
+public final class io/github/airflux/functional/kotest/ResultAssertionsKt {
+	public static final fun shouldBeError (Lio/github/airflux/functional/Result;)Lio/github/airflux/functional/Result$Error;
+	public static final fun shouldBeSuccess (Lio/github/airflux/functional/Result;)Lio/github/airflux/functional/Result$Success;
+}
+
