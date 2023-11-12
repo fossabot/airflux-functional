@@ -54,6 +54,7 @@ jobs:
           -Dsonar.organization=airflux
           -Dsonar.projectKey=airflux_airflux-functional
           -Dsonar.coverage.exclusions="**/src/test/**,**/buildSrc/**,**/config/**"
+          -Dsonar.exclusions="**/buildSrc/**,**/config/**"
     - name: Codacy Coverage Reporter
       uses: codacy/codacy-coverage-reporter-action@v1.3.0
       with:
