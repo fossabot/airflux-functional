@@ -16,7 +16,9 @@ jobs:
       GPG_PRIVATE_PASSWORD: ${{ secrets.GPG_PRIVATE_PASSWORD }}
       
     steps:
-    - uses: actions/checkout@v3.5.2
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Set up JDK
       uses: actions/setup-java@v1.4.4
