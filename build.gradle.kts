@@ -27,5 +27,9 @@ sonar {
         property("sonar.projectKey", "airflux_airflux-functional")
         property("sonar.organization", "airflux")
         property("sonar.host.url", "https://sonarcloud.io")
+        property(
+            "sonar.coverage.jacoco.xmlReportPaths",
+            "${projectDir.path}/build/reports/jacoco/test/jacocoTestReport.xml"
+        )
     }
 }
