@@ -22,7 +22,7 @@ import io.github.airflux.functional.isSuccess
 import io.kotest.assertions.failure
 import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.contract
-//Added `Kotest` assertions for the `Result` type
+
 @OptIn(ExperimentalContracts::class)
 public fun <T, E> Result<T, E>.shouldBeSuccess(): Result.Success<T> {
     contract {
